@@ -512,7 +512,8 @@ private:
             try
             {
               double timeout;
-              getMTPrivateNodeHandle().param("timeout", timeout, 1.0);
+              getMTPrivateNodeHandle().param("timeout", timeout, 5.0);  // Updated by SCW on 12/7/2022 to increase timeout
+              // getMTPrivateNodeHandle().param("timeout", timeout, 1.0);
 
               NODELET_DEBUG_ONCE("Setting timeout to: %f.", timeout);
               spinnaker_.setTimeout(timeout);
